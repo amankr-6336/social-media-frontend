@@ -40,53 +40,7 @@ function Signup() {
     <>
       <div className="Sign-Up">
         <div className="login-box">
-          <div className="slider-left">
-          <div className="upper">
-            <div className="box">
-             
-              <img src={nature} alt="" />
-            </div>
-            <div className="box">
-           
-              <img src={nature1} alt="" />
-            </div>
-            <div className="box">
-            
-              <img src={back4} alt="" />
-            </div>
-          </div>
-
-          <div className="middle">
-            {/* <h2>“Photography is the art of making memories tangible.”</h2> */}
-            <Typewriter
-              onInit={(typewriter) => {
-                typewriter
-
-                  .typeString("“Photography is the art of making memories tangible.”")
-
-                  .pauseFor(1000)
-                  .deleteAll()
-                  .typeString("Share your memories....")
-                  .start();
-              }}
-            />
-          </div>
-
-          <div className="lower">
-            <div className="box">
-              {" "}
-              <img src={back5} alt="" />
-            </div>
-            <div className="box">
-              {" "}
-              <img src={back6} alt="" />
-            </div>
-            <div className="box">
-              {" "}
-              <img src={back5} alt="" />
-            </div>
-          </div>
-          </div>
+         
 
           <div className="slider_right">
             <h2 className="heading">Sign Up</h2>

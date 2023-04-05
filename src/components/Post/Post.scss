@@ -1,11 +1,15 @@
 .Post{
     // border:  2px solid red;
     margin-top: 10px;
-    border-radius: 4px;
-    border-radius: 10px;
+   
     // background-image: linear-gradient(to right, #fa709a 0%, #fee140 100%);
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-  background-color: rgb(222, 221, 221);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    background-color: white;
+
     .heading{
         display: flex;
         align-items: center;
@@ -13,6 +17,9 @@
         height: 60px;
         padding: 10px;
         cursor:pointer;
+        h4{
+            font-family: sans-serif;
+        }
     }
     .icon{
         color: red;

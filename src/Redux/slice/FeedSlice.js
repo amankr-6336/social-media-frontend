@@ -7,7 +7,7 @@ export const getFeedData = createAsyncThunk( "user/getFeedData", async () => {
         try {
             // thunkAPI.dispatch(setLoading(true));
             const response= await axiosClient.get('/user/getFeedData');
-            console.log('user rsponse',response)
+            // console.log('user rsponse',response)
             return response.result;
         } catch (error) {
             return Promise.reject(error);

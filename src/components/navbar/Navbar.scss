@@ -4,7 +4,8 @@
    // background-image: linear-gradient(to right, #fa709a 0%, #fee140 100%);
    // box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
     border:  2px solid rgb(216, 215, 215);
-    background-color: rgb(222, 221, 221);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    overflow-y: hidden;
   
    .container{
     height: 100%;
@@ -34,7 +35,7 @@
       color: rgb(31, 30, 30);
       font-size: 2rem;
       position: relative;
-      font-family: 'Pacifico', cursive;
+    
    }
 
    span{
@@ -44,8 +45,8 @@
       // border: 2px solid red;
       border-radius: 50%;
       background-color: red;
-      left: 77px;
-      top: 15.5px;
+      left: 78px;
+      top: 8px;
       animation: pop .5s linear infinite ;
    }
 
@@ -63,16 +64,16 @@
 
    .banner:hover{
     cursor: pointer;
-    color: red;
+    color: rgb(109, 108, 108);
       span{
-         background-color: white;
+         background-color: rgb(13, 13, 13);
       }
    }
 
    .profile:hover{
       border-radius: 50%;
     cursor: pointer;
-    border: 2px solid red;
+    border: 2px solid rgb(7, 7, 7);
    }
 }
 

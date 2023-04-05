@@ -38,7 +38,7 @@ function Profile() {
   return (
     
     <div className='Profile'>
-       <div className="container">
+       <div className="container_p">
        {/* <img className='back' src="" alt="" /> */}
 
        
@@ -54,6 +54,7 @@ function Profile() {
                 <div className="textpart">
                     <h3 className='userName'>{userProfile?.name}</h3>
                     <p>{userProfile?.bio}</p>
+                    <hr />
                          <div className="info">
                             <h4>{`${userProfile?.followers?.length} Followers`}</h4>
                             <h4>{`${userProfile?.followings?.length} Followings`}</h4>
@@ -88,7 +89,7 @@ function Profile() {
 
           <div className="right_part_profile">
             {isMyProfile && <CreatePost/>}
-             {userProfile?.posts?.map(post => <Post key={post._id} post={post}/> ) };
+             {userProfile?.posts?.map(post => <Post key={post._id} post={post}/> ) }
           </div>
 
        </div>

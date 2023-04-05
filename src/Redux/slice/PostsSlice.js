@@ -6,7 +6,7 @@ export const getUserProfile = createAsyncThunk( "user/getUserProfile", async (bo
         try {
             // thunkAPI.dispatch(setLoading(true));
             const response= await axiosClient.post('/user/getUserProfile',body);
-            console.log('user rsponse',response)
+            // console.log('user rsponse',response)
             return response.result;
         } catch (error) {
             return Promise.reject(error);
@@ -21,7 +21,7 @@ export const likeAndUnlikePost= createAsyncThunk('/post/likeAndUnlike',async(bod
     try {
         // thunkAPI.dispatch(setLoading(true));
             const response= await axiosClient.post('/post/like',body);
-            console.log('user rsponse',response)
+            // console.log('user rsponse',response)
             return response.result.post;
     } catch (error) {
         return Promise.reject(error);
