@@ -20,7 +20,7 @@ function Followers({user}) {
 
   useEffect(() =>{
        setIsFollowing(feedData.followings.find(item => item._id===user._id))
-  },[feedData])
+  },[feedData,user])
 
 
   return (

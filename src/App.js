@@ -39,9 +39,9 @@ function App() {
       case TOAST_FAILURE:
         toast.error(toastData.message);
         break;
-      // default:
-      //   toast(toastData?.message);
-      //   break;  
+      default:
+        toast(toastData?.message);
+        break;  
     }
   },[toastData])
 

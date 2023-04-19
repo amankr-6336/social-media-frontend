@@ -2,7 +2,7 @@ import React from 'react'
 import Avatar from '../Avatar/Avatar';
 // import nature from '../../assets/Nature.jpg'
 import './Post.scss';
-import{AiOutlineHeart,AiOutlineComment,AiFillHeart} from 'react-icons/ai';
+import{AiOutlineHeart,AiFillHeart} from 'react-icons/ai';
 import { useDispatch } from 'react-redux';
 import { likeAndUnlikePost } from '../../Redux/slice/PostsSlice';
 import {useNavigate} from 'react-router'

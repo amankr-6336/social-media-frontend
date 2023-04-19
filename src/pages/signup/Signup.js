@@ -2,13 +2,7 @@ import React, { useState } from "react";
 import "./Signup.scss";
 import { Link, useNavigate } from "react-router-dom";
 import { axiosClient } from "../../utils/axiosClient";
-import nature from "../../assets/Nature.jpg";
-import Typewriter from "typewriter-effect";
 
-import nature1 from "../../assets/back2.jpg";
-import back4 from "../../assets/back4.jpg";
-import back5 from "../../assets/back5.jpg";
-import back6 from "../../assets/back6.jpg";
 
 function Signup() {
   const [name, setName] = useState("");
