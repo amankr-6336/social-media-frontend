@@ -30,7 +30,7 @@ function Followers({user}) {
       <h4 className='name'>{user?.name}</h4>
       </div>
       
-      <h5 onClick={handleUserFollow} className='hover'>{isFollowing? 'unfollow':'follow'}</h5>
+      <h5 onClick={handleUserFollow} className='hover'>{isFollowing? 'Unfollow':'Follow'}</h5>
     </div>
   )
 }

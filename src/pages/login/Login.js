@@ -5,6 +5,7 @@ import { axiosClient } from "../../utils/axiosClient";
 import { KEY_ACCESS_TOKEN, setItem } from "../../utils/localStorageManager";
 
 
+
 function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -18,9 +19,10 @@ function Login() {
         email,
         password,
       });
+
       setItem(KEY_ACCESS_TOKEN, response.result.accessToken);
       navigate("/");
-      console.log(response);
+
     } catch (error) {
       console.log(error);
     }
@@ -28,11 +30,26 @@ function Login() {
 
   return (
     <div className="Login">
-      <div className="login-box">   
+      <div className="tilt1">
+
+      </div>
+
+      <div className="tilt2">
+
+      </div>
+
+      <div className="login-boxl">
+        <div className="slider-leftl">
+          <div className="innerslider-left">
+            <div className="bannerbigs">
+              <h2 className='banners '>Socia<p>light</p></h2>
+            </div>
+          </div>
+        </div>
 
         <div className="slider-right">
           <h2 className="heading">Login</h2>
-          <form onSubmit={handleSubmit}>
+          <form  className='login-from' onSubmit={handleSubmit}>
             <label htmlFor="email">Email</label>
             <input
               type="email"

@@ -33,8 +33,22 @@ function Signup() {
   return (
     <>
       <div className="Sign-Up">
+        <div className="tilt1">
+
+        </div>
+
+        <div className="tilt2">
+
+        </div>
+
         <div className="login-box">
-         
+          <div className="slider-leftl">
+            <div className="innerslider-left">
+              <div className="bannerbigs">
+                <h2 className='banners '>Socia<p>light</p></h2>
+              </div>
+            </div>
+          </div>
 
           <div className="slider_right">
             <h2 className="heading">Sign Up</h2>
@@ -55,7 +69,7 @@ function Signup() {
                 id="name"
                 onChange={(e) => setLastName(e.target.value)}
               />
-               <hr />
+              <hr />
               <label htmlFor="email">Email</label>
               <input
                 type="email"
@@ -63,7 +77,7 @@ function Signup() {
                 id="email"
                 onChange={(e) => setEmail(e.target.value)}
               />
-               <hr />
+              <hr />
               <label htmlFor="password">Password</label>
               <input
                 type="password"
@@ -71,7 +85,7 @@ function Signup() {
                 id="password"
                 onChange={(e) => setPassword(e.target.value)}
               />
-               <hr />
+              <hr />
               <input type="submit" className="submit" />
             </form>
             <p>

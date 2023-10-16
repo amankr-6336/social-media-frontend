@@ -2,86 +2,86 @@
 
 .Sign-Up{
     height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100vw;
-    background-image: url('../../assets/new.jpg');
-    background-position: center;
-    background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  background-color: whitesmoke;
+  position: relative;
+  overflow-y: hidden;
 
-  
+  .tilt1 {
+    border-bottom: 100vh solid #ffa400;
+    border-left: 0px solid transparent;
+    border-right: 250px solid whitesmoke;
+    height: 0;
+    width: 60vw;
+  }
+
+  .tilt2 {
+    border-top: 100vh solid whitesmoke;
+    border-left: 250px solid whitesmoke;
+    border-right: 0px solid transparent;
+    height: 0;
+    width: 40vw;
+  }
    
    
     .login-box{
-        padding: 40px;
-        max-width: 80vw;
-        max-height: 550px;
-        border: 2px solid black;
-        border-radius: 20px;
         position: absolute;
-        left:auto;
-        // z-index: 5;
-        // backdrop-filter: blur(30px);
-
-        background: rgba(255, 255, 255, 0.2);
-        border-radius: 16px;
-        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-        backdrop-filter: blur(5px);
-        -webkit-backdrop-filter: blur(5px);
-        border: 1px solid rgba(255, 255, 255, 0.3);
-
+        width: 30vw;
+        height: 650px;
+    
+        border-radius: 20px;
+        left: auto;
+        background: whitesmoke;
+    
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
         gap: 30px;
-        flex-wrap: wrap;
+        background: rgba(255, 255, 255, 0.45);
+        box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        border-radius: 10px;
     }
     
 
-    .slider-left{
+    .slider-leftl{
         // border: 2px solid red;
-       
-        display: flex;
-       
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        gap: 10px;
-        
-
-         .upper{
-            display: flex;
-            gap: 10px;
-          
-           
-
-         }
-         .middle{
-           font-size: 1.8rem;
-           font-family: 'Lobster', cursive;
-         }
-
-         .lower{
-            display: flex;
-            gap: 10px;
-         }
-
-        .box{
-           
-            width: 200px;
+        width: 90%;
+        height: 10%;
+        border-bottom: 2px solid #ffa400;
+        .innerslider-left {
+          width: 90%;
+          height: 90%;
+          position: relative;
+          .bannerbigs {
+            width: 100%;
+            height: 100%;
             // border: 2px solid red;
-
-            img{
-                width: 100%;
-                object-position: center;
-                object-fit:contain;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .banners {
+              color: rgb(31, 30, 30);
+              font-size: 2.5rem;
+              position: relative;
+  
+              p {
+                display: inline;
+                font-size: 2.5rem;
+                color: #ffa400;
+              }
             }
+            .banner:hover {
+              cursor: pointer;
+            }
+          }
         }
 
-        .box:hover{
-            transform: scale(1.2);
-            transition: .5s ease-in-out;
-        }
     }
 
     .slider-right{
@@ -144,21 +144,19 @@
 
 @media screen and (max-width:600px) {
     
-   
-
-    .login-box{
-        min-height: 90vh;
-       justify-content: center;
-       align-items: center;
-
-       .slider-left{
-        width: 100%;
-
-        .upper,.lower{
-            display: none;
+    .Sign-Up{
+        .tilt1{
+          
+        }
+        .tilt2{
+    
+        }
+        .login-box{
+            width: 90vw;
+           max-height: 90vh;
         }
        }
-    }
+
 
     
 
@@ -166,24 +164,18 @@
 @media screen and (min-width:600px) and (max-width:800px) {
     
    
-
-    .login-box{
-        min-height: 90vh;
-       justify-content: center;
-       align-items: center;
-
-       .slider-left{
-        width: 100%;
-
-        .lower{
-            display: none;
+    .Sign-Up{
+        .tilt1{
+          
         }
-
-        .box{
-            width: 100px;
+        .tilt2{
+    
+        }
+        .login-box{
+            width: 80vw;
+           max-height: 90vh;
         }
        }
-    }
 
     
 
@@ -192,24 +184,18 @@
 @media screen and (min-width:800px) and (max-width:1000px) {
     
    
-
-    .login-box{
-        min-height: 90vh;
-       justify-content: center;
-       align-items: center;
-
-       .slider-left{
-        width: 100%;
-
-        .lower{
-            display: none;
+    .Sign-Up{
+        .tilt1{
+          
         }
-
-        .box{
-            width: 100px;
+        .tilt2{
+    
+        }
+        .login-box{
+            width: 60vw;
+           max-height: 90vh;
         }
        }
-    }
 
     
 
@@ -219,23 +205,18 @@
     
    
 
-    .login-box{
-        min-height: 90vh;
-       justify-content: center;
-       align-items: center;
-
-       .slider-left{
-        width: 100%;
-
-        .lower{
-            display: none;
+    .Sign-Up{
+        .tilt1{
+          
         }
-
-        .box{
-            width: 100px;
+        .tilt2{
+    
+        }
+        .login-box{
+            width: 60vw;
+           max-height: 90vh;
         }
        }
-    }
 
     
 

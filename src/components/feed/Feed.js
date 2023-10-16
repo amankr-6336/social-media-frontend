@@ -4,53 +4,66 @@ import { getFeedData } from '../../Redux/slice/FeedSlice';
 import Followers from '../follwers/Followers';
 import Post from '../Post/Post';
 import './Feed.scss';
+import FeedProfile from './feedprofile/FeedProfile';
 
 
 
 function Feed() {
-  
-  
-   const dispatch=useDispatch();
- 
-
-   const feedData=useSelector(state => state.FeedDataReducer.feedData);
-   
- 
 
 
-   useEffect(()=>{
-      dispatch(getFeedData());
-   },[dispatch]);
+  const dispatch = useDispatch();
+
+
+  const feedData = useSelector(state => state.FeedDataReducer.feedData);
+  const myProfile = useSelector((state) => state.appConfigReducer.myProfile);
+
+  console.log(myProfile);
+
+
+  useEffect(() => {
+    dispatch(getFeedData());
+  }, [dispatch]);
 
   return (
     <div className='Feed'>
-       <div className="container_f">
-          
-          <div className="left_part_feed">
-            {feedData?.posts?.map(post => <Post key={post._id} post={post}/>)}
-            {/* <Post/>
+      <div className="container_f">
+        <div className="midpartfeed">
+          {/* <Profile/> */}
+          <FeedProfile myProfile={myProfile} />
+        </div>
+
+
+
+        <div className="left_part_feed">
+          {feedData?.posts?.map(post => <Post key={post._id} post={post} />)}
+          {/* <Post/>
             <Post/>
             <Post/>
             <Post/>
             <Post/> */}
-          </div>
-          <div className="right_part">
-              <div className="following_to">
-                <h3  className='title'>You are follwing</h3>
-                <hr />
-                {feedData?.followings?.map(user => <Followers key={user._id} user={user}/>)}
-              </div>
+        </div>
+        <div className="right_part">
+          <div className="following_to">
+            <div className="titleff">
+              <h3 className='titlef'>You are follwing</h3>
+              <span className='bar'></span>
+            </div>
 
-              <div className="to_follow">
-                <h3  className='title'>People you may know</h3>
-                <hr />
-                {feedData?.suggestions?.map(user => <Followers key={user._id} user={user}/>)}
-               
-              </div>
+            {feedData?.followings?.map(user => <Followers key={user._id} user={user} />)}
           </div>
-        
-       </div>
-      
+
+          <div className="to_follow">
+            <div className="titleff">
+              <h3 className='titlef'>People you may Know</h3>
+              <span className='bar'></span>
+            </div>
+            {feedData?.suggestions?.map(user => <Followers key={user._id} user={user} />)}
+
+          </div>
+        </div>
+
+      </div>
+
     </div>
   )
 }

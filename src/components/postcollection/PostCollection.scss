@@ -1,0 +1,66 @@
+
+.gallerycard::-webkit-scrollbar {
+    display: none;
+  }
+  
+  /* Hide scrollbar for IE, Edge and Firefox */
+//   .example {
+//     -ms-overflow-style: none;  /* IE and Edge */
+//     scrollbar-width: none;  /* Firefox */
+//   }
+
+.gallerycard{
+    -webkit-column-count: 3;
+    -moz-column-count: 3;
+    column-count: 3;
+    // border: 2px solid rgb(55, 89, 4);
+    -webkit-column-width: 33%;
+    -moz-column-width: 33%;
+    column-width: 33%;
+    padding: 0 12px;
+    margin-bottom: 10px;
+
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none; 
+    // width: 100%;
+    // height: 100%;
+    // overflow-y: scroll ;
+    // display: grid;
+    // grid-template-columns: auto auto auto  ;
+    // grid-template-rows: auto auto;
+   
+    // border: 2px solid red;
+
+
+    // .pics{
+    //     width: 130px;
+    //     height: 130px;
+    //     border: 2px solid black;
+    //     padding: 0px;
+    //     img{
+    //         width: 100%;
+    //         height: 100%;
+    //         object-fit: cover;
+    //     }
+    // }
+   
+ }
+ 
+ .gallerycard .pics{
+    -webkit-transition:  all 350ms ease;
+    transition: all 350ms ease;
+    cursor: pointer;
+    margin-bottom:  10px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+     
+ 
+ 
+ }
+ 
+ 
+ .gallerycard .pics:hover{
+     transform: scale(1.1);
+ }
+ 
