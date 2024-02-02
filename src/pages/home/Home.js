@@ -6,7 +6,7 @@ import { useDispatch } from "react-redux";
 import { Outlet } from "react-router-dom";
 import Navbar from "../../components/navbar/Navbar";
 import { getMyInfo } from "../../Redux/slice/appConfigSlice";
-
+ 
 function Home() {
   
   const dispatch=useDispatch();

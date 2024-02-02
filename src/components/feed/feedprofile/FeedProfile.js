@@ -3,6 +3,7 @@ import './Feedprofile.scss'
 import {CiFacebook} from 'react-icons/ci'
 import {AiOutlineInstagram} from 'react-icons/ai'
 import {CiLinkedin} from 'react-icons/ci'
+import dummy from '../../../assets/dummy.png'
 
 function FeedProfile({ myProfile }) {
     console.log(myProfile?.avatar?.url)
@@ -12,7 +13,7 @@ function FeedProfile({ myProfile }) {
                 <div className="topfeedp">
                     <span className='blankspace'></span>
                     <div className="innertopfeedp">
-                        <img src={myProfile?.avatar?.url} alt="" />
+                        <img src={myProfile?.avatar?  myProfile?.avatar?.url: dummy} alt="" />
                     </div>
 
                 </div>

@@ -20,7 +20,10 @@ function Login() {
         password,
       });
 
+      
+
       setItem(KEY_ACCESS_TOKEN, response.result.accessToken);
+      console.log(response.result);
       navigate("/");
 
     } catch (error) {
