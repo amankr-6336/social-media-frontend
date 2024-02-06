@@ -1,0 +1,23 @@
+.main_story{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    
+
+    .a_story{
+        width: 13%;
+        height: 100%;
+        border: 2px solid black;
+        
+    }
+    .v_story{
+        width: 87%;
+        height: 100%;
+        display: flex;
+        gap: 5px;
+        
+    }
+}

@@ -5,6 +5,7 @@ import Followers from '../follwers/Followers';
 import Post from '../Post/Post';
 import './Feed.scss';
 import FeedProfile from './feedprofile/FeedProfile';
+import Story from '../STory/Story';
 
 
 
@@ -32,15 +33,18 @@ function Feed() {
           <FeedProfile myProfile={myProfile} />
         </div>
 
-
+        
 
         <div className="left_part_feed">
-          {feedData?.posts?.map(post => <Post key={post._id} post={post} />)}
-          {/* <Post/>
-            <Post/>
-            <Post/>
-            <Post/>
-            <Post/> */}
+          <div className="story_part">
+            <Story/>
+          </div>
+          
+          <div className="post_list_feed">
+               {feedData?.posts?.map(post => <Post key={post._id} post={post} />)}
+          </div>
+          
+          
         </div>
         <div className="right_part">
           <div className="following_to">

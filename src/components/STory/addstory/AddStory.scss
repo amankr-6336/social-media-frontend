@@ -1,0 +1,116 @@
+.addstory{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .inneraddstory{
+        width: 90%;
+        height: 90%;
+        border: 2px dashed black;
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .add_story_function{
+
+        }
+    }
+}
+
+.add_story_modal{
+    position: fixed;
+    z-index: 10;
+    left: 0px;
+    top: 0px;
+    background-color: rgba(0, 0, 0, 0.751);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .close{
+        position: absolute;
+        right: 50px;
+        top: 10px;
+       
+        background-color: whitesmoke;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      #close_icon{
+        font-size: 1.5rem;
+      }
+    }
+    .inner_modal{
+        width: 60%;
+        height: 100%;
+        // border: 2px solid black;
+        background-color: rgba(0, 0, 0, 0.622);
+        // background-color: grey;
+        // display: flex;
+        // justify-content: center;
+        // align-items: center;
+        // flex-direction: column;
+        padding: 10px;
+        position: relative;
+
+        .story_image_add{
+        //    width: 100%;
+        //    height: 10%;
+           position: absolute;
+           right: 50px;
+           top: 20px;
+         
+           .labelImg{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 90%;
+            gap: 5px;
+            color: white;
+            cursor: pointer;
+            .icon_{
+                font-size: 3rem;
+            }
+          
+           }
+        }
+        .story_img_container{
+             width: 100%;
+             height: 100%;
+            //  border: 2px solid black;
+             display: flex;
+             justify-content: center;
+             align-items: center;
+             img{
+                max-width: 100%;
+                max-height: 100%;
+                object-fit: contain;
+
+             }
+             .txt_preview{
+                color: white;
+             }
+        }
+        .post_button{
+           position: absolute;
+           right: 50px;
+           bottom: 50px;
+           padding: 10px 10px;
+           border-radius: 10px;
+           font-size: 1.2rem;
+           border: none;
+           cursor: pointer;
+           box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+        }
+        
+    }
+    
+}

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import Post from '../Post/Post'
 import './Profile.scss'
-// import profilepic from '../../assets/User.png';
+import dummy from '../../assets/User.png';
 // import back from '../../assets/back.jpg'
 import { useNavigate, useParams } from 'react-router-dom';
 import CreatePost from '../createpost/CreatePost';
@@ -52,7 +52,7 @@ function Profile() {
 
                   <div className="picpart">
                      <span className="pichalf"></span>
-                     <img id='propics' src={userProfile?.avatar?.url} alt="" />
+                     <img id='propics' src={userProfile?.avatar?.url?userProfile?.avatar?.url:dummy} alt="" />
 
                      <div className="nameandb">
                         <h3 className='userName'>{userProfile?.name}</h3>

@@ -20,11 +20,19 @@ function Login() {
         password,
       });
 
+      console.log(response);
+
+        setItem(KEY_ACCESS_TOKEN, response.result.accessToken);
+        console.log(response.result.accessToken);
+        navigate("/");
+     
+      
+      
       
 
-      setItem(KEY_ACCESS_TOKEN, response.result.accessToken);
-      console.log(response.result);
-      navigate("/");
+      // setItem(KEY_ACCESS_TOKEN, response.result.accessToken);
+      // console.log(response.result);
+      // navigate("/");
 
     } catch (error) {
       console.log(error);
