@@ -54,7 +54,7 @@ axiosClient.interceptors.response.use(
 
             const response=await axios.create({
               withCredentials:true
-            }).get(`${process.env.REACT_APP_SERVER_BASE_URL}/auth/refresh`);
+            }).get(`${process.env.REACT_APP_SERVER_BASE_URL}auth/refresh`);
 
 
 
@@ -62,17 +62,23 @@ axiosClient.interceptors.response.use(
 
             // console.log('respnse from backend',response);
 
+
             if(response.data.status==='ok'){
                 setItem(KEY_ACCESS_TOKEN,response.data.result.accessToken);
                 originalRequest.headers['Authorization']=`Bearer ${response.data.result.accessToken}`;
                 return axios(originalRequest);
             }
+            else{
+              removeItem(KEY_ACCESS_TOKEN);
+              window.location.replace('/login','_self');
+              return Promise.reject(error);
+            }
           }
-          else{
-            removeItem(KEY_ACCESS_TOKEN);
-            // window.location.replace('/login','_self');
-            return Promise.reject(error);
-          }
+          // else{
+          //   removeItem(KEY_ACCESS_TOKEN);
+          //   window.location.replace('http://localhost:3000/login','_self');
+          //   return Promise.reject(error);
+          // }
 
           return Promise.reject(error);
 

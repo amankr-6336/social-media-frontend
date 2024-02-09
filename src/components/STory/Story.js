@@ -12,7 +12,7 @@ function Story() {
   const profileStory=useSelector(state=>state.StoryReducer.story)
   
   // const [story,setStory]=useState([profileStory])
-  console.log(profileStory.allStory,"feeddata");
+  console.log(profileStory?.allStory,"feeddata");
   const dispatch=useDispatch();
 
   useEffect(()=>{
