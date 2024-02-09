@@ -15,27 +15,21 @@ function Login() {
     e.preventDefault();
 
     try {
+      console.log("from login");
       const response = await axiosClient.post("/auth/login", {
         email,
         password,
       });
-
-      console.log(response);
+      console.log(response,"from login")
 
         setItem(KEY_ACCESS_TOKEN, response.result.accessToken);
         console.log(response.result.accessToken);
-        navigate("/");
-     
-      
-      
-      
-
-      // setItem(KEY_ACCESS_TOKEN, response.result.accessToken);
-      // console.log(response.result);
-      // navigate("/");
+        // navigate("/");
 
     } catch (error) {
-      console.log(error);
+      setEmail("");
+      setPassword("");
+     
     }
   }
 

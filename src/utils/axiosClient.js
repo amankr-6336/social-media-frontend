@@ -70,7 +70,7 @@ axiosClient.interceptors.response.use(
           }
           else{
             removeItem(KEY_ACCESS_TOKEN);
-            window.location.replace('/login','_self');
+            // window.location.replace('/login','_self');
             return Promise.reject(error);
           }
 
