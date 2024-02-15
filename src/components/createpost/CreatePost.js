@@ -10,12 +10,16 @@ import { getUserProfile } from "../../Redux/slice/PostsSlice";
 
 function CreatePost() {
   const [postImg, setPostImg] = useState("");
+
   const [caption, setCaption] = useState("");
   const dispatch = useDispatch();
   const myProfile=useSelector(state => state.appConfigReducer.myProfile);
 
   const handleImageChange = (e) => {
+  
+    console.log(e.target.value);
     const file = e.target.files[0];
+    console.log(file);
     const fileReader = new FileReader();
     fileReader.readAsDataURL(file);
     fileReader.onload = () => {
@@ -32,6 +36,8 @@ function CreatePost() {
       const result = await axiosClient.post("/post", {
         caption,
         postImg,
+      
+
       });
       console.log('result',result);
       dispatch(getUserProfile({
@@ -42,7 +48,8 @@ function CreatePost() {
     } finally {
       // dispatch(setLoading(false));
       setCaption('');
-      setPostImg('')
+      setPostImg('');
+     
     }
   };
 
@@ -56,6 +63,7 @@ function CreatePost() {
         <input
           value={caption}
           type="text"
+          id="caption"
           className="captionInput"
           placeholder="what is in ur mind"
           onChange={(e) =>setCaption(e.target.value)}

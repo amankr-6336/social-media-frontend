@@ -32,7 +32,7 @@ function Post({post}) {
         <h4>{post?.owner?.name}</h4>
        </div>
        <div className="content">
-        <img src={post?.image?.url} alt="" />
+        <img src={post?.image?.url} alt=""  loading='lazy'/>
        </div>
        <div className="footer">
           

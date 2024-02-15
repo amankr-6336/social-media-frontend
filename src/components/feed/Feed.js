@@ -17,8 +17,9 @@ function Feed() {
 
   const feedData = useSelector(state => state.FeedDataReducer.feedData);
   const myProfile = useSelector((state) => state.appConfigReducer.myProfile);
+  // console.log(feedData,"for story");
 
-  console.log(myProfile);
+  // console.log(myProfile);
 
 
   useEffect(() => {

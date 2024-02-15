@@ -1,16 +1,25 @@
-import Login from "./pages/login/Login";
-import Signup from "./pages/signup/Signup"
+// import Login from "./pages/login/Login";
+// import Signup from "./pages/signup/Signup"
 import { Routes, Route } from "react-router-dom";
-import Home from "./pages/home/Home";
-import RequireUser from "./components/RequireUser";
-import Feed from "./components/feed/Feed";
-import Profile from "./components/profile/Profile";
-import UpdateProfile from "./components/updateProfile/UpdateProfile";
+// import Home from "./pages/home/Home";
+// import RequireUser from "./components/RequireUser";
+// import Feed from "./components/feed/Feed";
+// import Profile from "./components/profile/Profile";
+// import UpdateProfile from "./components/updateProfile/UpdateProfile";
 import { useSelector } from "react-redux";
-import { useEffect, useRef } from "react";
+import { Suspense, lazy, useEffect, useRef } from "react";
 import LoadingBar from 'react-top-loading-bar'
-import OnlyIfNotLoggedIn from "./components/OnlyIfNotLoggedIn";
+// import OnlyIfNotLoggedIn from "./components/OnlyIfNotLoggedIn";
 import toast, { Toaster } from 'react-hot-toast';
+
+const Login= lazy(()=>import('./pages/login/Login.js'));
+const Signup=lazy(()=>import('./pages/signup/Signup.js'));
+const Home=lazy(()=>import('./pages/home/Home.js'));
+const RequireUser=lazy(()=>import('./components/RequireUser.js'));
+const Feed =lazy(()=>import('./components/feed/Feed.js'));
+const Profile=lazy(()=>import('./components/profile/Profile.js'));
+const UpdateProfile=lazy(()=>import('./components/updateProfile/UpdateProfile.js'));
+const OnlyIfNotLoggedIn=lazy(()=>import('./components/OnlyIfNotLoggedIn.js'))
 
 export const TOAST_SUCCESS = 'toast_success';
 export const TOAST_FAILURE = 'toast_failure';
@@ -48,6 +57,7 @@ function App() {
 
   return (
     <div className="App">
+      <Suspense fallback={ <LoadingBar height={4} color='black' ref={loadingRef} />}>
       <LoadingBar height={4} color='black' ref={loadingRef} />
       <div><Toaster /></div>
       <Routes>
@@ -66,6 +76,7 @@ function App() {
         </Route>
 
       </Routes>
+      </Suspense>
     </div>
 
   );

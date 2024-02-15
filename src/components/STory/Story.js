@@ -4,21 +4,25 @@ import AddStory from './addstory/AddStory'
 import ViewStory from './viewstory/ViewStory'
 import { useDispatch, useSelector } from 'react-redux';
 
-import { getStory } from '../../Redux/slice/StorySlice';
+import { getAllStory, getStory } from '../../Redux/slice/StorySlice';
 
 function Story() {
   const myProfile = useSelector((state) => state.appConfigReducer.myProfile);
   const feedData = useSelector(state => state.FeedDataReducer.feedData);
-  const profileStory=useSelector(state=>state.StoryReducer.story)
+  const profileStory=useSelector(state=>state.StoryReducer.story);
+  const followingsStory=useSelector(state=>state.StoryReducer.allStory)
   
   // const [story,setStory]=useState([profileStory])
-  console.log(profileStory?.allStory,"feeddata");
+  // console.log(profileStory,"feeddata");
+  // console.log(followingsStory,"following story");
   const dispatch=useDispatch();
 
   useEffect(()=>{
     dispatch(getStory());
+    dispatch(getAllStory());
     // setStory(profileStory);
-  },[dispatch,feedData,myProfile])
+  },[dispatch,feedData,myProfile]);
+
 
  
 
@@ -29,8 +33,8 @@ function Story() {
        <AddStory />
        </div>
       <div className="v_story">
-        {profileStory?.allStory?.map(story => <ViewStory key={story._id} story={story} />)}
-     
+         {profileStory?.story?.map(story => <ViewStory key={story._id} story={story} />)}
+         {followingsStory?.story?.map(story=> <ViewStory key={story._id} story={story}/>)} 
       </div>
        
      </div>

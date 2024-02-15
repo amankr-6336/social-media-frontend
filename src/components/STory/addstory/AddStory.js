@@ -51,13 +51,15 @@ function AddStory() {
             <div className="addstory">
                 <div className="inneraddstory" onClick={() => setOpen(!open)}>
                     <div className="add_story_button">
-                        <MdOutlineAddCircle />
+                        <MdOutlineAddCircle id='add'/>
+                        <p>Add story</p>
                     </div>
                 </div>
             </div>
             {open && <div className="add_story_modal">
                 <div className="close" onClick={()=>setOpen(!open)}>
                     <IoCloseSharp id='close_icon' />
+                   
                 </div>
                 <div className="inner_modal">
                     <div className="story_image_add">

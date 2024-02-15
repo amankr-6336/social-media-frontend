@@ -1,23 +1,48 @@
 .main_story{
     width: 100%;
-    height: 100%;
+    height: fit-content;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
-    gap: 10px;
+    // gap: 10px;
+    // border: 2px solid red;
+    padding: 0px 5px;
     
 
     .a_story{
-        width: 13%;
-        height: 100%;
-        border: 2px solid black;
+        width: fit-content;
+        height: fit-content;
+        // border: 2px solid black;
+        // border: 2px solid red;
         
     }
     .v_story{
         width: 87%;
-        height: 100%;
+        // border: 2px solid red;
+        padding: 5px;
+        height: fit-content;
+       
+      
+        -ms-overflow-style: none; /* IE and Edge */
+        scrollbar-width: none; 
+        overflow-x: scroll;/* Enable horizontal scrollbar when content overflows */
         display: flex;
-        gap: 5px;
+       
         
+    }
+}
+
+@media screen and (max-width:600px) {
+    .main_story{
+          
+          
+        .a_story{
+        
+
+        }
+
+        .v_story{
+           
+        }
     }
 }

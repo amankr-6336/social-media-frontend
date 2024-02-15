@@ -6,7 +6,7 @@ import {CiLinkedin} from 'react-icons/ci'
 import dummy from '../../../assets/dummy.png'
 
 function FeedProfile({ myProfile }) {
-    console.log(myProfile?.avatar?.url)
+    // console.log(myProfile?.avatar?.url)
     return (
         <div className="feedprofile">
             <div className="innerfeedprofile">

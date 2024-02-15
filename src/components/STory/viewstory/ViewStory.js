@@ -1,5 +1,6 @@
 import React, { useState ,useEffect} from 'react'
 import './ViewStory.scss'
+import dummy from '../../../assets/User.png'
 
 import { IoCloseSharp } from "react-icons/io5";
 
@@ -34,16 +35,22 @@ function ViewStory({ story }) {
     <>
       <div className="viewstory">
         <div className="inner_view_story" onClick={()=>setOpen(!open)}>
-          <img src={story?.image?.url} alt="" />
+          <img src={story?.image?.url} loading='lazy' alt="" />
         </div>
 
       </div>
       {open &&<div className="viewmodal">
+         <div className="story_profile_info">
+            <div className="story_profile_pic">
+              <img src={story?.owner?.avatar? story?.owner?.avatar?.url:dummy} alt="" />
+            </div>
+            <p>{story?.owner?.name}</p>
+         </div>
         <div className="close" onClick={() => setOpen(!open)}>
           <IoCloseSharp id='close_icon' />
         </div>
         <div className="inner_view_modal">
-          <img src={story?.image?.url} alt="" />
+          <img src={story?.image?.url} loading='lazy' alt="" />
         </div>
         <div className="progress-bar-container">
             <div
